@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>COP 3330 Project 8: Form Results</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        /* Simple styling for header to meet font size requirements */
+        h1 {
+            font-size: 26pt; /* Between 24pt and 28pt */
+        }
+        em {
+            font-style: italic; /* Ensure emphasized text is italicized */
+        }
+    </style>
+</head>
+<body>
+<h1>[Alondra Reyes-Pagan] COP 3330 Project 8: Results</h1>
+<p><em>Here is the data you entered.</em></p>
+
+<p th:text="'Student ID: ' + ${greeting.studentId}" />
+<p th:text="'Date: ' + ${#numbers.formatInteger(greeting.month, 2)} + '/' + ${#numbers.formatInteger(greeting.day, 2)} + '/' + ${greeting.year}" />
+<p th:text="'Message: ' + ${greeting.message}" />
+
+<a href="/greeting">Submit another message</a>
+</body>
+</html>
